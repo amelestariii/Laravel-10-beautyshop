@@ -65,6 +65,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile', [ProfileController::class, 'edit_profile'])->name('edit_profile');
     
     // Route untuk menampilkan nota transaksi
-    Route::get('/order/nota/{order}', [OrderController::class, 'notaTransaksi'])->name('nota');
+    Route::get('order/nota/{order}', [OrderController::class, 'notaTransaksi'])->name('nota');
 });
 

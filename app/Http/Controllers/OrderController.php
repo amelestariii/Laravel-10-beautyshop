@@ -118,13 +118,8 @@ class OrderController extends Controller
     }
 
     // Menampilkan nota transaksi
-    public function NotaTransaksi($id)
+    public function NotaTransaksi(Order $order)
     {
-        // Mengambil semua pesanan untuk pengguna
-        $orders = Order::where('user_id', $id)->get(); // Fetching all orders for the user
-        
-        // Menampilkan nota transaksi
-        return view('nota', compact('orders'));
+        return view('nota', compact('order'));
     }
-
 }

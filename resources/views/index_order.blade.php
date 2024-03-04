@@ -18,7 +18,7 @@
                             <h6 class="card-subtitle mb-2 text-muted">By {{$order->user->name }}</h6>
                             @if ($order->is_paid == true)
                             <p class="card-text">Paid</p>
-                            <form action="{{route('nota', $order->user_id) }}" method="get">
+                            <form action="{{route('nota', $order->id) }}" method="get">
                                 <a href="nota">
                                 <button class="btn btn-success" type="submit">Struk</button></a>
                             </form>
